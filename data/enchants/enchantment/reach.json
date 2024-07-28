@@ -1,0 +1,40 @@
+{
+    "anvil_cost": 4,
+    "description": "Reach",
+    "supported_items": "#enchants:enchantable/tool_and_weapon",
+    "slots": ["hand"],
+    "max_level": 3,
+    "max_cost": {
+        "base": 20,
+        "per_level_above_first": 5
+    },
+    "min_cost": {
+        "base": 2,
+        "per_level_above_first": 4
+    },
+    "weight": 5,
+    "effects": {
+        "attributes": [
+            {
+                "attribute": "player.entity_interaction_range",
+                "id": "entity_reach_bouns",
+                "operation": "add_value",
+                "amount": {
+                    "type": "linear",
+                    "base": 0.5,
+                    "per_level_above_first": 0.5
+                }
+            },
+            {
+                "attribute": "player.block_interaction_range",
+                "id": "block_reach_bouns",
+                "operation": "add_value",
+                "amount": {
+                    "type": "linear",
+                    "base": 0.5,
+                    "per_level_above_first": 0.5
+                }
+            }
+        ]
+    }
+}
