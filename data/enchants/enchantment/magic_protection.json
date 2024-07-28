@@ -1,0 +1,57 @@
+{
+    "anvil_cost": 1,
+    "description": "Magic Protection",
+    "effects": {
+        "minecraft:damage_protection": [
+            {
+                "effect": {
+                    "type": "minecraft:add",
+                    "value": {
+                        "type": "minecraft:linear",
+                        "base": 2.0,
+                        "per_level_above_first": 2.0
+                    }
+                },
+                "requirements": {
+                    "condition": "minecraft:all_of",
+                    "terms": [
+                        {
+                            "condition": "minecraft:damage_source_properties",
+                            "predicate": {
+                                "tags": [
+                                    {
+                                        "expected": true,
+                                        "id": "enchants:magic"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "minecraft:tick": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "enchants:poison/reduce_all"
+                }
+            }
+        ]
+    },
+    "exclusive_set": "#minecraft:exclusive_set/armor",
+    "max_cost": {
+        "base": 12,
+        "per_level_above_first": 11
+    },
+    "max_level": 4,
+    "min_cost": {
+        "base": 1,
+        "per_level_above_first": 11
+    },
+    "slots": [
+        "armor"
+    ],
+    "supported_items": "#minecraft:enchantable/armor",
+    "weight": 10
+}

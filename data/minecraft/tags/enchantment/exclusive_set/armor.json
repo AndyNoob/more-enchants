@@ -1,0 +1,13 @@
+{
+    "values": [
+        "minecraft:protection",
+        "minecraft:blast_protection",
+        "minecraft:fire_protection",
+        "minecraft:projectile_protection",
+        {
+            "id": "enchants:magic_protection",
+            "required": false
+        }
+    ],
+    "replace": true
+}
