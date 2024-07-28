@@ -29,14 +29,6 @@
                     ]
                 }
             }
-        ],
-        "minecraft:tick": [
-            {
-                "effect": {
-                    "type": "minecraft:run_function",
-                    "function": "enchants:poison/reduce_all"
-                }
-            }
         ]
     },
     "exclusive_set": "#minecraft:exclusive_set/armor",
