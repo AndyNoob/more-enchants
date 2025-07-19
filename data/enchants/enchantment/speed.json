@@ -1,0 +1,30 @@
+{
+    "anvil_cost": 6,
+    "description": "Gotta Go Fast",
+    "supported_items": "#minecraft:enchantable/armor",
+    "slots": ["armor"],
+    "max_level": 3,
+    "max_cost": {
+        "base": 20,
+        "per_level_above_first": 5
+    },
+    "min_cost": {
+        "base": 2,
+        "per_level_above_first": 4
+    },
+    "weight": 5,
+    "effects": {
+        "minecraft:attributes": [
+            {
+                "attribute": "minecraft:movement_speed",
+                "id": "entity_speed_bouns",
+                "operation": "add_value",
+                "amount": {
+                    "type": "linear",
+                    "base": 0.005,
+                    "per_level_above_first": 0.005
+                }
+            }
+        ]
+    }
+}

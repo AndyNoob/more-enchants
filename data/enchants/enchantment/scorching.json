@@ -1,0 +1,89 @@
+{
+    "anvil_cost": 2,
+    "description": "Scorching Hot",
+    "supported_items": "#minecraft:enchantable/weapon",
+    "slots": ["hand"],
+    "max_level": 3,
+    "max_cost": {
+        "base": 20,
+        "per_level_above_first": 5
+    },
+    "min_cost": {
+        "base": 2,
+        "per_level_above_first": 4
+    },
+    "weight": 5,
+    "effects": {
+        "location_changed": [
+            {
+                "effect": {
+                    "type": "minecraft:attribute",
+                    "attribute": "movement_speed",
+                    "id": "entity_scorch_slow",
+                    "operation": "add_value",
+                    "amount": {
+                        "type": "linear",
+                        "base": 0,
+                        "per_level_above_first": -0.006
+                    }
+                }
+            }
+        ],
+        // "minecraft:damage": [
+        //     {
+        //         "effect": {
+        //             "type": "add",
+        //             "value": {
+        //                 "type": "linear",
+        //                 "base": 1,
+        //                 "per_level_above_first": 1
+        //             }
+        //         }
+        //     }
+        // ],
+        "attributes": [
+            {
+                "amount": {
+                    "type": "linear",
+                    "base": 1,
+                    "per_level_above_first": 1
+                },
+                "attribute": "attack_damage",
+                "id": "entity_scorch_damage_bonus",
+                "operation": "add_value"
+            }
+        ],
+        "tick": [
+            {
+                "effect": {
+                    "type": "ignite",
+                    "duration":  {
+                        "type": "linear",
+                        "base": 1,
+                        "per_level_above_first": 1
+                    }
+                }
+            }
+        ],
+        "minecraft:post_attack": [
+            {
+                "affected": "victim",
+                "enchanted": "attacker",
+                "requirements": {
+                    "condition": "damage_source_properties",
+                    "predicate": {
+                        "is_direct": true
+                    }
+                },
+                "effect": {
+                    "type": "ignite",
+                    "duration": {
+                        "type": "linear",
+                        "base": 1.5,
+                        "per_level_above_first": 1.5
+                    }
+                }
+            }
+        ]
+    }
+}

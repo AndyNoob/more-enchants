@@ -1,0 +1,30 @@
+{
+    "anvil_cost": 6,
+    "description": "Tank",
+    "supported_items": "#minecraft:enchantable/armor",
+    "slots": ["armor"],
+    "max_level": 3,
+    "max_cost": {
+        "base": 20,
+        "per_level_above_first": 5
+    },
+    "min_cost": {
+        "base": 2,
+        "per_level_above_first": 4
+    },
+    "weight": 5,
+    "effects": {
+        "minecraft:attributes": [
+            {
+                "attribute": "minecraft:max_health",
+                "id": "entity_health_bouns",
+                "operation": "add_value",
+                "amount": {
+                    "type": "linear",
+                    "base": 0.25,
+                    "per_level_above_first": 0.25
+                }
+            }
+        ]
+    }
+}
