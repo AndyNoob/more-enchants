@@ -14,9 +14,9 @@
     },
     "weight": 5,
     "effects": {
-        "attributes": [
+        "minecraft:attributes": [
             {
-                "attribute": "player.entity_interaction_range",
+                "attribute": "minecraft:entity_interaction_range",
                 "id": "entity_reach_bouns",
                 "operation": "add_value",
                 "amount": {
@@ -26,7 +26,7 @@
                 }
             },
             {
-                "attribute": "player.block_interaction_range",
+                "attribute": "minecraft:block_interaction_range",
                 "id": "block_reach_bouns",
                 "operation": "add_value",
                 "amount": {
