@@ -1,0 +1,32 @@
+{
+  "anvil_cost": 25,
+  "description": "20/20 Vision",
+  "effects": {
+    "minecraft:tick": [
+      {
+        "effect": {
+            "type": "minecraft:apply_mob_effect",
+            "to_apply": "night_vision",
+            "min_duration": 12,
+            "min_amplifier": 1,
+            "max_duration": 12,
+            "max_amplifier": 1
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 41,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "head"
+  ],
+  "supported_items": "#minecraft:enchantable/head_armor",
+  "weight": 2
+}
