@@ -1,0 +1,30 @@
+{
+    "anvil_cost": 25,
+    "description": "Step Up",
+    "supported_items": "#minecraft:enchantable/foot_armor",
+    "slots": ["feet"],
+    "max_level": 3,
+    "max_cost": {
+        "base": 20,
+        "per_level_above_first": 5
+    },
+    "min_cost": {
+        "base": 2,
+        "per_level_above_first": 4
+    },
+    "weight": 5,
+    "effects": {
+        "minecraft:attributes": [
+            {
+                "attribute": "minecraft:step_height",
+                "id": "entity_step_bouns",
+                "operation": "add_value",
+                "amount": {
+                    "type": "linear",
+                    "base": 0.5,
+                    "per_level_above_first": 0.5
+                }
+            }
+        ]
+    }
+}
